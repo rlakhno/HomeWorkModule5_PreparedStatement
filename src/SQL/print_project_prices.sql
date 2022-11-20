@@ -1,0 +1,1 @@
+SELECT p.project_id, SUM(w.salary)*(DATEDIFF (MONTH, start_date, finish_date)) AS PRICE FROM project p INNER JOIN project_worker pw ON p.project_id = pw.project_id INNER JOIN worker w ON pw.worker_id = w.worker_id GROUP BY p.project_id ORDER BY "PRICE" DESC;

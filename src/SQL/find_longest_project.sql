@@ -1,0 +1,1 @@
+SELECT project_id, DATEDIFF (MONTH, start_date, finish_date) as longest_month FROM  project WHERE (DATEDIFF (MONTH, start_date, finish_date )) = (SELECT  MAX(duration) FROM(SELECT project_id,(DATEDIFF (MONTH, start_date, finish_date )) duration FROM project ORDER BY duration DESC) AS a) GROUP BY project_id

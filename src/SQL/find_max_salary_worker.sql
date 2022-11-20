@@ -1,0 +1,1 @@
+SELECT name , salary as max_salary FROM worker WHERE salary= (SELECT MAX(salary) FROM worker)
