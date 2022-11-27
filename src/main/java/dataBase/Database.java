@@ -1,10 +1,12 @@
-package org.example;
+package dataBase;
+
+import org.example.GettingProperties;
 
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.Properties;
+import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -26,6 +28,8 @@ public class Database {
         return dbIsntance;
     }
 
+
+
     public Connection getConnection() throws IOException {
 
 
@@ -43,5 +47,12 @@ public class Database {
         }
 
         return conn;
+    }
+    public void executeUpdate(String sql){
+        try (Statement st = conn.createStatement()){
+            st.executeUpdate(sql);
+        }catch (Exception ex){
+            System.out.println("Table already exists");
+        }
     }
 }

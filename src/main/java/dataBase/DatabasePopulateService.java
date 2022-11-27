@@ -1,4 +1,6 @@
-package org.example;
+package dataBase;
+
+import dataBase.Database;
 
 import java.io.IOException;
 import java.nio.file.Files;

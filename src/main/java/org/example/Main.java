@@ -1,6 +1,9 @@
 package org.example;
 
 
+import dataBase.DatabaseQueryService;
+import sqlClassMethods.LongestProject;
+
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;

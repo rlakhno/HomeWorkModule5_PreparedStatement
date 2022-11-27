@@ -1,4 +1,4 @@
-package org.example;
+package sqlClassMethods;
 
 import java.sql.ResultSet;
 

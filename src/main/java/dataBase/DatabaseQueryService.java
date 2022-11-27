@@ -1,4 +1,6 @@
-package org.example;
+package dataBase;
+
+import sqlClassMethods.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
